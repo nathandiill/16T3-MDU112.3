@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Walls : MonoBehaviour {
+public class Walls : MonoBehaviour
+{
     private Rigidbody2D rb;
 
 	void Start ()
