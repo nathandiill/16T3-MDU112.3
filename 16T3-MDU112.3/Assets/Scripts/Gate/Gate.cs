@@ -5,6 +5,7 @@ public class Gate : MonoBehaviour
 {
     private SpriteRenderer sr;
     private Color thisColor;
+    
 
     // Use this for initialization
     void Start ()
@@ -14,8 +15,9 @@ public class Gate : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update ()
+    {
+        	
 	}
 
     void OnTriggerEnter2D(Collider2D other)
