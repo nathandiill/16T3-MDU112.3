@@ -11,7 +11,7 @@ public class YellowGate : Gate
         yellowCollider = gameObject.GetComponent<Collider2D>();
         
         yellowCollider.enabled = false;
-        GameManager.Instance.CurrentXP(1, GameManager.Instance.currentXP);
+        GameManager.Instance.CurrentXP(1);
     }
 
     public Collider2D blueCollider;
@@ -32,5 +32,10 @@ public class YellowGate : Gate
         redCollider = gameObject.GetComponent<Collider2D>();
 
         redCollider.enabled = true;
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        GameManager.Instance.CurrentXP(1);
     }
 }

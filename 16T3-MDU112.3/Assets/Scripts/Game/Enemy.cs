@@ -15,6 +15,10 @@ public class Enemy : MonoBehaviour
             delayActive = true;
             Update();
             SoundManager.Instance.enemyAudio();
+        }
+        else if (GameObject.FindGameObjectWithTag("Projectile"))
+        {
+            Destroy(gameObject);
         }              
     }
 

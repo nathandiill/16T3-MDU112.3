@@ -114,8 +114,57 @@ public class PlayerController : MonoBehaviour
         Debug.Log(other.gameObject.tag);
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    // Give the player a speed boost upon leveling up
+    public void levelUpBonus()
     {
-        
+        if (GameManager.Instance.CurrentLevel == 1)
+        {
+            movementSpeed = 5.5f;
+        }
+
+        if (GameManager.Instance.CurrentLevel == 2)
+        {
+            movementSpeed = 6f;
+        }
+
+        if (GameManager.Instance.CurrentLevel == 3)
+        {
+            movementSpeed = 6.5f;
+        }
+
+        if (GameManager.Instance.CurrentLevel == 4)
+        {
+            movementSpeed = 7f;
+        }
+
+        if (GameManager.Instance.CurrentLevel == 5)
+        {
+            movementSpeed = 7.5f;
+        }
+
+        if (GameManager.Instance.CurrentLevel == 6)
+        {
+            movementSpeed = 8f;
+        }
+
+        if (GameManager.Instance.CurrentLevel == 7)
+        {
+            movementSpeed = 8.5f;
+        }
+
+        if (GameManager.Instance.CurrentLevel == 8)
+        {
+            movementSpeed = 9f;
+        }
+
+        if (GameManager.Instance.CurrentLevel == 9)
+        {
+            movementSpeed = 9.5f;
+        }
+
+        if (GameManager.Instance.CurrentLevel == 10)
+        {
+            movementSpeed = 10f;
+        }
     }
 }

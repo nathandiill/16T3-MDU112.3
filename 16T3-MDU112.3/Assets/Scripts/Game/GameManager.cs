@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public int CurrentLevel;
     public int xpToLevelUp;
-    public int currentXP = 0;
+    public int currentXP;
+    public int XPNeeded;
 
     void Awake()
     {
@@ -14,10 +15,9 @@ public class GameManager : MonoBehaviour
     }
 
     // Add XP from given sources
-    public int CurrentXP(int increasedXP, int currentXP)
+    public void CurrentXP(int increasedXP)
     {
         currentXP = currentXP + increasedXP;
-        return currentXP;
     }
 
     // Detect if the player has levelled up
@@ -73,16 +73,18 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void Start ()
+    public void XPToNextLevel()
+    {
+        XPNeeded = CurrentLevel * CurrentLevel;
+        xpToLevelUp = XPNeeded - currentXP;
+    }
+
+    void Update()
     {
         UIManager.Instance.CumlativeXP();
         UIManager.Instance.Level();
         UIManager.Instance.XPNextLevel();
+        UIManager.Instance.CurrentMaxSpeed();
+        PlayerController.Instance.levelUpBonus();
     }
-	
-	void Update ()
-    {
-        // Call the level check with the current XP
-        NewCurrentLevel(currentXP);
-	}
 }
