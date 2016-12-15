@@ -13,5 +13,7 @@ public class RedKey : Key
         {
             Gate.SendMessage("RedKeyPickedUp", SendMessageOptions.DontRequireReceiver);
         }
+
+        SoundManager.Instance.redKeyAudio();
     }
 }

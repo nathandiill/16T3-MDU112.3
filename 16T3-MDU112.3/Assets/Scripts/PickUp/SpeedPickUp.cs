@@ -7,5 +7,7 @@ public class SpeedPickUp : PickUp
     {
         PlayerController.Instance.movementSpeed = 10.0f;
         Destroy(gameObject);
+
+        SoundManager.Instance.speedAudio();
     }
 }

@@ -12,6 +12,8 @@ public class YellowKey : Key
         foreach (GameObject Gate in Gates)
         {
             Gate.SendMessage("YellowKeyPickedUp", SendMessageOptions.DontRequireReceiver);
-        }               
+        }
+
+        SoundManager.Instance.yellowKeyAudio();
     }
 }

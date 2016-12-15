@@ -13,5 +13,7 @@ public class BlueKey : Key
         {
             Gate.SendMessage("BlueKeyPickedUp", SendMessageOptions.DontRequireReceiver);
         }
+
+        SoundManager.Instance.blueKeyAudio();
     }
 }

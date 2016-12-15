@@ -7,5 +7,7 @@ public class XPPickUp : PickUp
     {
         GameManager.Instance.CurrentXP(1, GameManager.Instance.currentXP);
         Destroy(gameObject);
+
+        SoundManager.Instance.XPAudio();
     }
 }
