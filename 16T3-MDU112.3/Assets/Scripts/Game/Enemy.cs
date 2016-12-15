@@ -10,9 +10,12 @@ public class Enemy : MonoBehaviour
     // If enemy is touched reload scene to reset player
     void OnCollisionEnter2D (Collision2D other)
     {
-        delayActive = true;
-        Update();
-        SoundManager.Instance.enemyAudio();
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            delayActive = true;
+            Update();
+            SoundManager.Instance.enemyAudio();
+        }              
     }
 
     // Timer in update

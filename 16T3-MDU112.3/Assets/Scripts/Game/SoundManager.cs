@@ -62,4 +62,17 @@ public class SoundManager : MonoBehaviour
         SFXChannel.PlayOneShot(victory);
     }
 
+    // To call when fire audio is needed
+    public void fireAudio()
+    {
+        AudioClip victory = EventSounds[7];
+        SFXChannel.PlayOneShot(victory);
+    }
+
+    // To call when impact audio is needed
+    public void impactAudio()
+    {
+        AudioClip victory = EventSounds[8];
+        SFXChannel.PlayOneShot(victory);
+    }
 }
