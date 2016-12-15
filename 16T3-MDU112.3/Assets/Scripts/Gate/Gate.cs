@@ -4,18 +4,13 @@ using System.Collections;
 public class Gate : MonoBehaviour
 {
     private SpriteRenderer sr;
-    private Color thisColor;
     
-
-    // Use this for initialization
-    void Start ()
+    void Start()
     {
         sr = gameObject.GetComponent<SpriteRenderer>();
-        thisColor = sr.color;
     }
 	
-	// Update is called once per frame
-	void Update ()
+	void Update()
     {
         	
 	}

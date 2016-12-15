@@ -13,12 +13,14 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    // Add XP from given sources
     public int CurrentXP(int increasedXP, int currentXP)
     {
         currentXP = currentXP + increasedXP;
         return currentXP;
     }
 
+    // Detect if the player has levelled up
     public int NewCurrentLevel(int CurrentXP)
     {
         if (CurrentXP == 0)
@@ -80,6 +82,7 @@ public class GameManager : MonoBehaviour
 	
 	void Update ()
     {
-	
+        // Call the level check with the current XP
+        NewCurrentLevel(currentXP);
 	}
 }

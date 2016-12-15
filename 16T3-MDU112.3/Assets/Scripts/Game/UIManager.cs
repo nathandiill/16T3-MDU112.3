@@ -15,25 +15,20 @@ public class UIManager : MonoBehaviour
     public Text LevelText;
     public Text XPNextLevelText;
 
+    // Display text for given UI
     public void CumlativeXP()
     {
-        int newCumlativeXP = 0;
-        GameManager.Instance.currentXP = newCumlativeXP;
-        CumulativeXPText.text = ("Cumulative XP: " + newCumlativeXP);
+        CumulativeXPText.text = ("Cumulative XP: " + GameManager.Instance.currentXP);
     }
 
     public void Level()
     {
-        int CurrentLevel = 0;
-        GameManager.Instance.CurrentLevel = CurrentLevel;
-        LevelText.text = ("Level: " + CurrentLevel);
+        LevelText.text = ("Level: " + GameManager.Instance.CurrentLevel);
     }
 
     public void XPNextLevel()
     {
-        int newXPToLevelUp = 0;
-        GameManager.Instance.xpToLevelUp = newXPToLevelUp;
-        XPNextLevelText.text = ("XP to Next Level: " + newXPToLevelUp);
+        XPNextLevelText.text = ("XP to Next Level: " + GameManager.Instance.xpToLevelUp);
     }
 
 }

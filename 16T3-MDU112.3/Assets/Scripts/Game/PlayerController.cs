@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         originalColor = sr.color;
     }
 
+    // Retrieve user input
     void Update ()
     {
         float horizontal = Input.GetAxis("Horizontal");

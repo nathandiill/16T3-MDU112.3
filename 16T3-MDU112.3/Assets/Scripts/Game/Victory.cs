@@ -7,6 +7,7 @@ public class Victory : MonoBehaviour
     public float sceneDelay = 3.0f;
     private bool delayActive = false;
 
+    // On collision activate delay and play victory sound
     void OnCollisionEnter2D(Collision2D other)
     {
         delayActive = true;

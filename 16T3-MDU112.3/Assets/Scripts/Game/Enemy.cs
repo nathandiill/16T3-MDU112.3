@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public float sceneDelay = 3.0f;
     private bool delayActive = false;
 
+    // If enemy is touched reload scene to reset player
     void OnCollisionEnter2D (Collision2D other)
     {
         delayActive = true;
@@ -14,6 +15,7 @@ public class Enemy : MonoBehaviour
         SoundManager.Instance.enemyAudio();
     }
 
+    // Timer in update
 	void Update()
     {
         if(delayActive)

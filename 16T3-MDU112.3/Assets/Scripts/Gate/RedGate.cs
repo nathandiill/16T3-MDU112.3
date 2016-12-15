@@ -5,6 +5,7 @@ public class RedGate : Gate
 {
     public Collider2D redCollider;
 
+    // If redkey is active, disable collider
     void RedKeyPickedUp()
     {
         redCollider = gameObject.GetComponent<Collider2D>();
@@ -15,6 +16,7 @@ public class RedGate : Gate
 
     public Collider2D yellowCollider;
 
+    // If yellowkey is active, enable collider
     void YellowKeyPickedUp()
     {
         yellowCollider = gameObject.GetComponent<Collider2D>();
@@ -24,6 +26,7 @@ public class RedGate : Gate
 
     public Collider2D blueCollider;
 
+    // If bluekey is active, enable collider
     void BlueKeyPickedUp()
     {
         blueCollider = gameObject.GetComponent<Collider2D>();
