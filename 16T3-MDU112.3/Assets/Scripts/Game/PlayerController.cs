@@ -3,6 +3,13 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+
+    void Awake()
+    {
+        Instance = this;
+    }
+
     private Rigidbody2D rb;
     private Vector2 userInput;
     public float movementSpeed = 5.0f;

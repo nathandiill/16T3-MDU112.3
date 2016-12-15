@@ -22,13 +22,7 @@ public class Gate : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Attempt to retrieve the other objects spiter renderer
+        // Retrieve the other objects spiter renderer
         SpriteRenderer otherSR = other.gameObject.GetComponent<SpriteRenderer>();
-
-        // Was the Sprite Renderer retrieved?
-        if (otherSR != null)
-        {
-            
-        }
     }
 }

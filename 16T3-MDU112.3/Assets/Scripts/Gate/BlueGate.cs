@@ -12,7 +12,7 @@ public class BlueGate : Gate
         blueCollider.enabled = false;
         GameManager.Instance.CurrentXP(1, GameManager.Instance.currentXP);
     }
-
+  
     public Collider2D yellowCollider;
 
     void YellowKeyPickedUp()

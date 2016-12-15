@@ -6,9 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public int CurrentLevel;
     public int xpToLevelUp;
-    public int currentXP;
-
-    UIManager.Instance.CumulativeXP();
+    public int currentXP = 0;
 
     void Awake()
     {
@@ -75,8 +73,10 @@ public class GameManager : MonoBehaviour
 
     void Start ()
     {
-	
-	}
+        UIManager.Instance.CumlativeXP();
+        UIManager.Instance.Level();
+        UIManager.Instance.XPNextLevel();
+    }
 	
 	void Update ()
     {
